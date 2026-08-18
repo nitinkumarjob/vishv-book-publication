@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Handwriting Job | Work From Home</title>
+  <meta name="description" content="Work From Home Handwriting Job. Get work details and updates through Telegram.">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,Helvetica,sans-serif;
+    }
+
+    body{
+      background:#f6f8fc;
+      color:#172033;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    header{
+      background:#fff;
+      border-bottom:1px solid #e9edf5;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .nav{
+      height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:800;
+      color:#18243a;
+    }
+
+    .logo span{
+      color:#229ed9;
+    }
+
+    .nav-btn{
+      background:#229ed9;
+      color:#fff;
+      padding:11px 19px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .hero{
+      padding:75px 0 65px;
+      background:
+        radial-gradient(circle at top right,rgba(34,158,217,.15),transparent 35%),
+        linear-gradient(135deg,#fff,#f1f7ff);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:45px;
+      align-items:center;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#e7f6ff;
+      color:#1684bb;
+      padding:8px 14px;
+      border-radius:50px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    h1{
+      font-size:clamp(38px,5vw,62px);
+      line-height:1.08;
+      letter-spacing:-1.8px;
+      margin-bottom:20px;
+    }
+
+    h1 span{
+      color:#229ed9;
+    }
+
+    .hero p{
+      color:#647087;
+      font-size:18px;
+      max-width:620px;
+      margin-bottom:28px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:13px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:15px 23px;
+      border-radius:12px;
+      font-weight:800;
+      transition:.2s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .telegram{
+      background:#229ed9;
+      color:#fff;
+      box-shadow:0 10px 25px rgba(34,158,217,.25);
+    }
+
+    .whatsapp{
+      background:#25d366;
+      color:#fff;
+    }
+
+    .hero-card{
+      background:#fff;
+      padding:30px;
+      border-radius:24px;
+      box-shadow:0 20px 60px rgba(27,48,82,.12);
+      border:1px solid #edf1f7;
+    }
+
+    .hero-card-icon{
+      width:65px;
+      height:65px;
+      border-radius:18px;
+      background:#e7f6ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      margin-bottom:20px;
+    }
+
+    .hero-card h3{
+      font-size:23px;
+      margin-bottom:9px;
+    }
+
+    .hero-card p{
+      font-size:15px;
+      margin-bottom:20px;
+    }
+
+    .check{
+      display:flex;
+      gap:10px;
+      margin:12px 0;
+      font-size:14px;
+      color:#4d596d;
+    }
+
+    .check b{
+      color:#229ed9;
+    }
+
+    section{
+      padding:75px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      max-width:680px;
+      margin:0 auto 42px;
+    }
+
+    .section-title h2{
+      font-size:36px;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#69758a;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:#fff;
+      padding:28px;
+      border-radius:18px;
+      border:1px solid #e9edf5;
+      box-shadow:0 8px 30px rgba(27,48,82,.05);
+    }
+
+    .icon{
+      width:50px;
+      height:50px;
+      border-radius:14px;
+      background:#eef8fd;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      margin-bottom:17px;
+    }
+
+    .card h3{
+      margin-bottom:8px;
+      font-size:19px;
+    }
+
+    .card p{
+      color:#68758a;
+      font-size:14px;
+    }
+
+    .steps{
+      background:#fff;
+    }
+
+    .step-number{
+      font-size:15px;
+      font-weight:800;
+      color:#229ed9;
+      margin-bottom:10px;
+    }
+
+    .cta{
+      background:linear-gradient(135deg,#16243a,#233a59);
+      color:#fff;
+      border-radius:25px;
+      padding:55px 30px;
+      text-align:center;
+    }
+
+    .cta h2{
+      font-size:36px;
+      margin-bottom:12px;
+    }
+
+    .cta p{
+      color:#d5deea;
+      max-width:650px;
+      margin:0 auto 25px;
+    }
+
+    .faq{
+      max-width:780px;
+      margin:auto;
+    }
+
+    details{
+      background:#fff;
+      border:1px solid #e7ebf2;
+      border-radius:13px;
+      padding:18px 20px;
+      margin-bottom:12px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:700;
+    }
+
+    details p{
+      color:#68758a;
+      font-size:14px;
+      padding-top:12px;
+    }
+
+    footer{
+      background:#111a29;
+      color:#aeb9ca;
+      text-align:center;
+      padding:30px 15px 85px;
+      font-size:13px;
+    }
+
+    .sticky-telegram{
+      position:fixed;
+      bottom:18px;
+      right:18px;
+      z-index:9999;
+      background:#229ed9;
+      color:#fff;
+      padding:14px 20px;
+      border-radius:50px;
+      font-weight:800;
+      box-shadow:0 10px 30px rgba(0,0,0,.2);
+    }
+
+    @media(max-width:800px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:50px 0;
+      }
+
+      section{
+        padding:55px 0;
+      }
+
+      .nav-btn{
+        display:none;
+      }
+
+      h1{
+        letter-spacing:-1px;
+      }
+
+      .cta h2{
+        font-size:29px;
+      }
+    }
+
+    @media(max-width:480px){
+      .buttons{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .sticky-telegram{
+        left:18px;
+        right:18px;
+        text-align:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      Handwriting<span>Job</span>
+    </div>
+
+    <a class="nav-btn"
+       href="https://t.me/HANDWRITINGjob6"
+       target="_blank">
+      Join Telegram
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="badge">
+        ✍️ Work From Home Opportunity
+      </div>
+
+      <h1>
+        Handwriting Work<br>
+        <span>From Home</span>
+      </h1>
+
+      <p>
+        Looking for handwriting-related work from home?
+        Get complete work details, requirements and updates
+        through our Telegram channel.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn telegram"
+           href="https://t.me/HANDWRITINGjob6"
+           target="_blank">
+          ✈️ Join on Telegram
+        </a>
+
+        <a class="btn whatsapp"
+           href="https://wa.me/"
+           target="_blank">
+          💬 WhatsApp Support
+        </a>
+
+      </div>
+    </div>
+
+    <div class="hero-card">
+
+      <div class="hero-card-icon">
+        ✍️
+      </div>
+
+      <h3>
+        Get Complete Details
+      </h3>
+
+      <p>
+        Connect with our Telegram channel to check
+        available handwriting work, requirements and updates.
+      </p>
+
+      <div class="check">
+        <b>✓</b> Work details & requirements
+      </div>
+
+      <div class="check">
+        <b>✓</b> Latest work updates
+      </div>
+
+      <div class="check">
+        <b>✓</b> Direct support
+      </div>
+
+      <a class="btn telegram"
+         href="https://t.me/HANDWRITINGjob6"
+         target="_blank"
+         style="width:100%;margin-top:12px;">
+        ✈️ Get Details on Telegram
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Work Details</h2>
+      <p>
+        Understand the opportunity and requirements before applying.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🏠</div>
+        <h3>Work From Home</h3>
+        <p>
+          Complete eligible handwriting-related tasks remotely
+          according to the provided instructions.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✍️</div>
+        <h3>Handwriting Tasks</h3>
+        <p>
+          Work may involve handwriting-based assignments
+          depending on the available project.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Clear Instructions</h3>
+        <p>
+          Receive relevant instructions and requirements
+          before starting assigned work.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>How It Works</h2>
+      <p>
+        A simple process to get the required information.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="step-number">STEP 01</div>
+        <h3>Join Telegram</h3>
+        <p>
+          Connect with our primary Telegram channel.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="step-number">STEP 02</div>
+        <h3>Check Details</h3>
+        <p>
+          Review available work details and requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="step-number">STEP 03</div>
+        <h3>Apply</h3>
+        <p>
+          Follow the provided application instructions
+          if the opportunity suits you.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Why Contact Us?</h2>
+      <p>
+        Get the information you need before deciding whether to apply.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Direct Communication</h3>
+        <p>
+          Contact our support team through Telegram or WhatsApp.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>Work Information</h3>
+        <p>
+          Get relevant project details and requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔎</div>
+        <h3>Clear Information</h3>
+        <p>
+          Review available information before choosing to apply.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="background:#f1f5fa;">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq">
+
+      <details>
+        <summary>
+          What type of work is available?
+        </summary>
+        <p>
+          Available projects may include handwriting-related
+          tasks. Contact support for current project details.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          How can I get complete details?
+        </summary>
+        <p>
+          Telegram is our primary support channel.
+          Join Telegram to receive relevant information.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Can I contact you on WhatsApp?
+        </summary>
+        <p>
+          Yes. WhatsApp support is also available
+          for general enquiries.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Do I need to apply immediately?
+        </summary>
+        <p>
+          No. Review the work details and requirements first,
+          then decide whether you want to proceed.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <h2>
+        Interested in Handwriting Work?
+      </h2>
+
+      <p>
+        Connect with us on Telegram to receive the latest
+        available work details and application information.
+      </p>
+
+      <div class="buttons"
+           style="justify-content:center;">
+
+        <a class="btn telegram"
+           href="https://t.me/HANDWRITINGjob6"
+           target="_blank">
+          ✈️ Join Telegram
+        </a>
+
+        <a class="btn whatsapp"
+           href="https://wa.me/"
+           target="_blank">
+          💬 WhatsApp Support
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 Handwriting Job Services. All rights reserved.
+  </p>
+
+  <p style="margin-top:7px;">
+    Please review all work terms and requirements before applying.
+  </p>
+
+</footer>
+
+<a class="sticky-telegram"
+   href="https://t.me/HANDWRITINGjob6"
+   target="_blank">
+  ✈️ Join Telegram
+</a>
+
+</body>
+</html>
